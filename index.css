@@ -40,6 +40,27 @@
     font-style: Regular;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter/static/Inter_28pt-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('./fonts/Figtree/static/Figtree-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -271,6 +292,7 @@ body {
     margin: 0 auto;
     padding-left: 128px;
     padding-right: 128px;
+    margin-bottom: 204px;
 
     position: relative;
 }
@@ -330,5 +352,183 @@ body {
     cursor: pointer;
     width: 471px;
     margin-top: 33px;
+}
+
+.program-title {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 470px;
+    line-height: 156px;
+    letter-spacing: -9px;
+    text-align: center;
+    text-transform: lowercase;
+    color: #1057FE;
+}
+
+.programs-cards {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+
+/* Огромное слово program уже есть */
+
+.cards-wrapper {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 48px;
+    z-index: 2;
+}
+
+/* CARD BASE */
+.program-card {
+    width: 470px;
+    height: 594px;
+
+    padding: 42px 38px 47px 42px;
+
+    border-radius: 54.48px;
+
+    background: rgba(235, 235, 235, 0.4);
+    backdrop-filter: blur(53.15px);
+
+    box-shadow:
+        0px 6.64px 11.96px rgba(255, 255, 255, 0.1),
+        inset 0px -2px 4.6px #F15632;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITLES */
+.card-title {
+    font-size: 33.24px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 39.89px;
+    font-family: 'Inter', Arial, sans-serif;
+    padding-bottom: 9px;
+}
+
+.card-main {
+    padding-left: 38px;
+    margin-bottom: 37px;
+}
+
+/* PRICE */
+.card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-family: 'DM Sans', Arial, sans-serif;
+    padding-bottom: 12px;
+}
+
+.price {
+    font-size: 71px;
+    font-weight: 700;
+}
+
+.period {
+    font-size: 26.57px;
+    font-weight: 500;
+}
+
+/* DESCRIPTION */
+.card-desc {
+    font-size: 17px;
+    line-height: 29.23px;
+    color: #3D3D3D;
+    letter-spacing: normal;
+}
+
+/* LIST */
+.card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: auto;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 23.92px;
+}
+
+/* BUTTON */
+.card-btn {
+    width: 318px;
+    height: 58px;
+
+    align-self: center;
+
+    border-radius: 132.87px;
+    border: none;
+    border-bottom: 2.66px solid #D53814;
+
+    background: linear-gradient(180deg, #FF9F89 0%, #F15632 100%);
+    box-shadow: inset 0px 0px 5.31px #991B1B;
+
+    /* ТЕКСТ */
+    font-family: 'Figtree', Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 26.57px;
+    line-height: 31.89px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+/* POPULAR BADGE */
+.popular {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -24px;
+    left: 54%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 162.1px;
+    height: 47.83px;
+    padding: 20.26px;
+
+    border-radius: 155.86px;
+
+    background:
+        linear-gradient(180deg, #F18B74 0%, #F15632 100%);
+
+    box-shadow:
+        inset 0px 0px 6.23px #C73216;
+
+    font-family: 'Figtree', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 26.57px;
+    line-height: 37.41px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    color: #FFFFFF;
+    white-space: nowrap;
 }
 
