@@ -8,41 +8,78 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-container">
+<header class="header">
+    <div class="container header-container">
+        <!-- LEFT -->
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="./img/LuminaLogo.svg" alt="Logo Lumina">
+                    </div>
+                </div>
 
-            <div class="logo">
-                <img src="./img/LuminaLogo.svg" alt="Logo_Lumina">
+                <!-- CENTER (desktop navigation) -->
+                <nav class="nav">
+                    <a href="#">Deposit</a>
+                    <a href="#">
+                        Investments
+                        <img src="./img/CaretDown.svg" alt="Caret">
+                    </a>
+                    <a href="#">Lumina Club</a>
+                    <a href="#">Contacts</a>
+                </nav>
+
+                <!-- RIGHT -->
+                <div class="header-right">
+                    <div class="auth">
+                        <a href="#" class="login">Log in</a>
+                        <a href="#" class="register">Register</a>
+                    </div>
+
+                    <button class="burger" aria-label="Open menu">
+                        <img src="./img/HeaderMenu.svg" alt="Menu">
+                    </button>
+                </div>
+
             </div>
+        </header>
 
-            <div class="spacer logo-nav"></div>
 
-            <nav class="nav">
-                <a href="#">Deposit</a>
-                <a href="#">Investments <img src="./img/CaretDown.svg" alt="Caret"></a>
-                <a href="#">Lumina Club</a>
-                <a href="#">Contacts</a>
-            </nav>
+    <div class="menu-overlay"></div>
 
-            <div class="spacer nav-auth"></div>
 
-            <div class="auth">
-                <a href="#" class="login">Log in</a>
-                <a href="#" class="register">Register</a>
-            </div>
+    <div class="mobile-menu">
 
+        <nav class="mobile-nav">
+            <a href="#">DEPOSIT</a>
+
+            <a href="#" class="has-caret">
+                INVESTMENTS
+                <img src="./img/CaretDown.svg" alt="Open">
+            </a>
+
+            <a href="#">LUMINA CLUB</a>
+            <a href="#">CONTACTS</a>
+        </nav>
+
+        <div class="mobile-auth">
+            <a href="#" class="mobile-login">LOG IN</a>
+            <a href="#" class="mobile-register">Register</a>
         </div>
-    </header>
+
+    </div>
+
+
 
 
     <section class="section section-hero">
+    <div class="container hero-container">
     <div class="hero-content">
         <h1 class="hero-title">
             Reliable investments
         </h1>
 
         <p class="hero-subtitle">
-            earn <span class="highlight">up to 24%</span> 
+            earn <span class="highlight">up to 24%</span><span class="second-hero-subtitle">annually.</span>
         </p>
         
 
@@ -50,7 +87,9 @@
             annually
         </p>
 
+
     </div>
+    
 
         <p class="start-content">
             Start now!
@@ -59,7 +98,7 @@
         <button class="hero-btn">
             GET STARTED
         </button>
-
+    </div>
     </section>
 
 
@@ -128,7 +167,7 @@
 
             <p class="card-desc">
                 The best start for cautious investors —
-                test <br>the model and see results in 6 months.
+                test the model and see results in 6 months.
             </p>
             </div>
 
@@ -169,9 +208,374 @@
         </div>
     </div>
 </div>
+        <div class="active-program-info">
+            <p class="second-programs-text">Funds are allocated within the company’s operating model and supported by underlying real assets, with transparent terms and predefined participation conditions.</p>
+
+            <button class="second-programs-btn">
+                READ ABOUT PROGRAMS <img src="./img/ArrowRight.svg" alt="ArrowRight">
+            </button>
+        </div>
+</section>
+
+<section class="section section-bg">
+    <div class="container">
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+
+    <div class="bg-content">
+        <h2 class="bg-title">Lumina Deposits with Bank Guarantee. A reliable way to preserve and grow your capital in USD.</h2>
+
+        <div class="bg-features">
+
+            <!-- LEFT COLUMN -->
+            <div class="features-col">
+                <div class="feature-item">
+                    <button class="feature-header">
+                        <img src="./img/plus.svg" alt="plus">
+                        <span>Legal protection for investors</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque amet beatae nisi dolores ut neque suscipit voluptates. 
+                            Dolores, sunt impedit natus quae consectetur nulla ducimus voluptatum excepturi tenetur voluptates.
+                        </p>
+                    </div>
+            </div>
+
+                <div class="feature-item">
+                    <button class="feature-header">
+                        <img src="./img/plus.svg" alt="plus">
+                        <span>You invest in real assets</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                            From apart-hotels to commercial properties — all assets come with a clear structure, proper documentation, and predictable returns.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <button class="feature-header">
+                        <img src="./img/plus.svg" alt="plus">
+                        <span>Stable rental income</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Earum labore est dolorem incidunt ea aliquam consectetur doloribus delectus necessitatibus vero. 
+                            Impedit placeat error assumenda, laborum magnam adipisci repellat. Sequi, ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="features-col">
+                <div class="feature-item">
+                    <button class="feature-header">
+                    <img src="./img/plus.svg" alt="plus">
+                        <span>Minimal Risks</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Quisquam praesentium quis, impedit veniam modi dignissimos odit unde officia pariatur culpa natus et blanditiis, 
+                            voluptates ipsum voluptatibus similique corrupti debitis labore!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <button class="feature-header">
+                        <img src="./img/plus.svg" alt="plus">
+                        <span>Start investing from $500</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Reiciendis impedit consequatur eius, eveniet aliquid laudantium ipsum voluptates. 
+                            Doloremque sapiente quisquam, numquam quas accusamus a distinctio placeat iusto eos. Perferendis, dolore.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <button class="feature-header">
+                        <img src="./img/plus.svg" alt="plus">
+                        <span>Partnership with Developers</span>
+                    </button>
+                    <div class="feature-body">
+                        <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Error adipisci iure officiis atque libero. Minus iusto quasi, reprehenderit in quia sapiente at, 
+                            vel dolorum ipsa rem magni aut corporis perspiciatis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="bg-exp">
+            <span>8 years</span> of experience in asset<br>
+            management and investment projects
+        </h2>
+
+        <div class="bg-button-wrap">
+            <button class="bg-button">
+                Get in touch
+                <img src="./img/ArrowRight2.svg" alt="ArrowRight">
+            </button>
+        </div>
+
+    </div>
+</div>
 </section>
 
 
+<section class="section-opp">
+        <div class="container">
+    <div class="opp-content">
+
+        <div class="opp-titles"> 
+            <h2 class="opp-title">Investment</h2>
+            <h2 class="opp-title">opportunities</h2>
+        </div>
+
+        <div class="opp-invst-img">
+            <div class="opp-images">
+                <img src="./img/coolbuilding.png" alt="">
+                <span class="gap-12"></span>
+                <img src="./img/collguy.png" alt="">
+                <span class="gap-17"></span>
+                <img src="./img/collcar.png" alt="">
+            </div>
+
+            <div class="opp-images-texts">
+                <div class="opp-img-text">
+                    <p>Real Estate</p>
+                    <span>Invest in residential and commercial real estate with predictable returns and long-term value growth.</span>
+                </div>
+                <span class="gap-12"></span>
+                <div class="opp-img-text">
+                    <p>Deposits</p>
+                    <span>Place funds in deposit programs with fixed terms and transparent interest rates.</span>
+                </div>
+                <span class="gap-17"></span>
+                <div class="opp-img-text">
+                    <p>Car Rental</p>
+                    <span>Invest in vehicle rental projects that generate stable income through long-term and short-term leases.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="opp-info">
+            <div class="opp-left-inf">
+                <h2>
+                    LUMINA CLUB.<span class="Privileges">Privileges</span> for 
+                    <span class="partners-img">selected <img src="./img/orange_line.png" alt="orange_line"></span> 
+                    partners
+                </h2>
+                <p>Lumina Club is a private community for those who want to stay one step ahead.<br>
+                    Club members gain early access to new investment projects, receive enhanced returns, and become part of an exclusive network of investors and entrepreneurs.</p>
+            </div>
+
+        <div class="opp-right-inf">
+
+            <div class="opp-tab">
+                <button class="opp-tab-header">
+                    <span>Be the first to learn about new projects</span>
+                    <img src="./img/plus.svg" alt="toggle">
+                </button>
+                <div class="opp-tab-body">
+                    <p>
+                        Get access to investment opportunities before they are publicly launched.
+                    </p>
+                </div>
+            </div>
+
+            <div class="opp-tab">
+                <button class="opp-tab-header">
+                    <span>Private investor community</span>
+                    <img src="./img/plus.svg" alt="toggle">
+                </button>
+                <div class="opp-tab-body">
+                    <p>
+                        Access a closed network of experienced investors and entrepreneurs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="opp-tab">
+                <button class="opp-tab-header">
+                    <span>Higher returns</span>
+                    <img src="./img/plus.svg" alt="toggle">
+                </button>
+                <div class="opp-tab-body">
+                    <p>
+                        Enhanced investment conditions available only to club members.
+                    </p>
+                </div>
+            </div>
+
+            <div class="opp-tab">
+                <button class="opp-tab-header">
+                    <span>Events and education</span>
+                    <img src="./img/plus.svg" alt="toggle">
+                </button>
+                <div class="opp-tab-body">
+                    <p>
+                        Closed events, meetings, and educational sessions.
+                    </p>
+                </div>
+            </div>
+
+        <div class="opp-tab">
+            <button class="opp-tab-header">
+                <span>Up to 2 weeks of stay at the property</span>
+                <img src="./img/plus.svg" alt="toggle">
+            </button>
+            <div class="opp-tab-body">
+                <p>
+                    Complimentary stays at selected Lumina properties.
+                </p>
+            </div>
+        </div>
+
+        <div class="opp-tab">
+            <button class="opp-tab-header">
+                <span>Personal manager</span>
+                <img src="./img/plus.svg" alt="toggle">
+            </button>
+            <div class="opp-tab-body">
+                <p>
+                    Dedicated manager for personalized support.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="section section-club">
+    <div class="container">
+    <div class="section-club-info">
+
+        <div class="left-club-info">
+            <h2 class="club-title">
+                How to join the<br>Club
+            </h2>
+
+            <p class="club-note">
+                To become a member of Lumina Club, a minimum investment of $30,000 is required.
+                <br>To apply, contact us or click the button below.
+            </p>
+        </div>
+
+        <div class="right-club-info">
+            <h3 class="club-benefits-title">Club benefits:</h3>
+
+            <ul class="club-benefits">
+                <li>Early access to investment opportunities</li>
+                <li>Higher returns for club members</li>
+                <li>Private network of investors and entrepreneurs</li>
+                <li>Exclusive events and education</li>
+                <li>Dedicated personal manager</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="club-titles">
+        <h2 class="club-second-title">Membership requirement:</h2>
+        <h2 class="club-second-title">Minimum investment <br>— <span>from $30,000</span></h2>
+    </div>
+
+        <button class="club-button">
+            Join the Club
+        </button>
+    </div>
+</section>
+
+
+<section class="sub-section">
+    <div class="container">
+    <div class="sub-content">
+        <div class="left-sub-content">
+            <h2>SUBSCRIBE</h2>
+        </div>
+        <div class="right-sub-content">
+            <p>Receive Lumina news, information about new projects, investment opportunities, and partnership offers.<br>
+            <br>If you are interested in a personal consultation, our manager will contact you.</p>
+
+            <form class="sub-form" action="/send" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="sub-submit-button">
+                    <img src="./img/ArrowRight3.svg" alt="SubminArrowRight">
+                </button>
+            </form>
+
+            <div class="sub-info">
+                <h2>Subscribe to Updates</h2>
+                <p>By submitting this form, you agree to the processing of your personal data.</p>
+            </div>
+        </div>
+        
+
+    </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+    <div class="fotter-info">
+        <div class="footer-left-info">
+            <img class="footer-img" src="./img/LuminaLogo2.svg" alt="FooterLogoLumina">
+            <div class="footer-nav">
+                <a href="#">Deposit</a>
+                <a href="#">Investments <img src="./img/CaretDownWhite.svg" alt="Caret"></a>
+                <a href="#">Lumina Club</a>
+                <a href="#">Contacts</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="footer-social">
+                    <img src="./img/facebook.svg" alt="">
+                </a>
+                <a href="#" class="footer-social">
+                <img src="./img/instagram.svg" alt="">
+                </a>
+                <a href="#" class="footer-social">
+                    <img src="./img/youtube.svg" alt="">
+                </a>
+                <a href="#" class="footer-social">
+                    <img src="./img/whatsapp.svg" alt="">
+                </a>
+                <a href="#" class="footer-social">
+                    <img src="./img/telegram.svg" alt="">
+                </a>
+                <a href="#" class="footer-social">
+                    <img src="./img/x.svg" alt="">
+                </a>
+            </div>
+            <p class="footer-rights">© 2025 Lumina. All rights reserved.<br>
+            The information on this website is provided for informational purposes only.</p>
+
+        </div>
+        <div class="footer-right-info">
+            <h2 class="footer-title">
+                Have<br> questions?
+            </h2>
+            <p class="right-footer-info">Contact us to receive a personalized offer and start working with us today.</p>
+            <p class="right-footer-tel">+90 553 632 2400</p>
+            <p class="right-footer-map-info"><img src="./img/MapLogo.svg" alt="MapMarker">HURMA MAH. HURMA CAD. A NO: 41 A İÇ KAPI NO: 21 KONYAALTI/ ANTALYA</p>
+        </div>
+    </div>
+    </div>
+</footer>
 
 </body>
+<script src="./index.js"></script>
 </html>
