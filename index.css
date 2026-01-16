@@ -2484,6 +2484,10 @@ body {
     .start-content {
         margin-bottom: 503px;
     }
+
+    .footer-section {
+        height: 1150px;
+    }
 }
 
 @media (max-width: 390px) { 
