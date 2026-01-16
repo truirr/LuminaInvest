@@ -21,6 +21,8 @@ items.forEach(item => {
 
 
 
+
+
 const oppTabs = document.querySelectorAll('.opp-tab');
 
 oppTabs.forEach(tab => {
@@ -42,6 +44,10 @@ oppTabs.forEach(tab => {
     });
 });
 
+
+
+
+
 const burger = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const overlay = document.querySelector('.menu-overlay');
@@ -58,5 +64,20 @@ function closeMenu() {
     document.body.style.overflow = '';
 }
 
-burger.addEventListener('click', openMenu);
+burger.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('active')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+
 overlay.addEventListener('click', closeMenu);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        closeMenu();
+    }
+});
+
+

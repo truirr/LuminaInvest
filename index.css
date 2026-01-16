@@ -16,7 +16,7 @@
     font-family: 'Helvetica';
     src: url('./fonts/Helvetica/helvetica-light-587ebe5a59211.ttf') format('truetype');
     font-weight: 300;
-    font-style: light;
+    font-style: normal;
 }
 
 @font-face {
@@ -37,7 +37,7 @@
     font-family: 'Yellowtail';
     src: url(./fonts/Yellowtail/Yellowtail-Regular.ttf) format('truetype');
     font-weight: 400;
-    font-style: Regular;
+    font-style: normal;
 }
 
 @font-face {
@@ -75,8 +75,8 @@
 
 body {
     font-family: 'Helvetica', Arial, sans-serif;
+    scrollbar-width: none;
 }
-
 
 .header {
     position: fixed;
@@ -88,7 +88,7 @@ body {
     padding-right: 141px;
     margin-top: 20px;
 
-    z-index: 1000;
+    z-index: 2001;
 }
 
 .header-container {
@@ -188,7 +188,8 @@ body {
     top: 0;
     right: 0;
 
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 100vh;
 
     background: #ffffff;
@@ -959,6 +960,9 @@ body {
     font-size: 149px;
     line-height: 156px;
     letter-spacing: -8px;
+}
+
+.opp-titles {
     margin-bottom: 82px;
 }
 
@@ -966,11 +970,23 @@ body {
     padding-left: 139px;
 }
 
+.opp-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 289px;
+    padding-left: 138px;
+}
+
 .opp-images {
     display: grid;
-    grid-template-columns: 466px 12px 471px 17px 676px;
+    grid-template-columns:
+        clamp(320px, 24vw, 466px)
+        12px
+        clamp(340px, 25vw, 471px)
+        17px
+        clamp(420px, 32vw, 676px);
+
     align-items: end;
-    margin-bottom: 25px;
 }
 
 .gap-12 {
@@ -981,10 +997,31 @@ body {
     width: 17px;
 }
 
+.gap {
+    pointer-events: none;
+}
+
+.opp-img {
+    width: 100%;
+}
+
 .opp-images img {
     display: block;
     max-width: 100%;
     height: auto;
+    margin-bottom: 25px;
+}
+
+.opp-images img:nth-child(1) {
+    grid-column: 1;
+}
+
+.opp-images img:nth-child(2) {
+    grid-column: 3;
+}
+
+.opp-images img:nth-child(3) {
+    grid-column: 5;
 }
 
 .opp-images-texts {
@@ -1014,6 +1051,7 @@ body {
     color: #808080;
 }
 
+
 .opp-info {
     padding-left: 138px;
     display: flex;
@@ -1032,13 +1070,19 @@ body {
     margin-bottom: 52px;
 }
 
-.opp-left-inf span {
+.Privileges {
     font-family: 'Yellowtail';
     font-weight: 400;
     font-size: 80px;
     line-height: 82px;
     letter-spacing: -2px;
     color: #F15632;
+}
+
+.line-1 {
+    display: flex;
+    align-items: center;
+    padding-top: 9px;
 }
 
 .opp-left-inf p {
@@ -1061,7 +1105,7 @@ body {
 
 .partners-img {
     position: relative;
-    display: inline-block;
+    display: none;
 }
 
 .partners-img img {
@@ -1072,10 +1116,43 @@ body {
     pointer-events: none;
 }
 
-.opp-right-inf {
-    width: 647.5px;
-    padding-top: 12px;
+.second-partners-img {
+    font-family: 'Helvetica' !important;
+    font-weight: 400 !important;
+    font-size: 58px !important;
+    line-height: 58px !important;
+    letter-spacing: -1.8px !important;
+    color: #000 !important;
+    position: relative;
+    display: inline-block;
+    align-content: center;
+    padding-top: 9px;
 }
+
+.second-partners-img img {
+    position: absolute;
+    left: 0;
+    bottom: -31px;
+    height: auto;
+    pointer-events: none;
+}
+
+.opp-right-inf {
+    max-width: 647.5px;
+    padding-top: 12px;
+    padding-right: 21px;
+}
+
+.club-title-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.club-title-line span {
+    white-space: nowrap;
+}
+
 
 .opp-tab {
     border-top: 1px solid #CCCCCC;
@@ -1164,7 +1241,8 @@ body {
 }
 
 .left-club-info {
-    width: 959px;
+    max-width: 959px;
+    width: 100%;
     position: relative;
 }
 
@@ -1238,6 +1316,10 @@ body {
     justify-content: flex-end;
     margin-bottom: 92px;
     padding-right: 139px;
+}
+
+.adaptive-club-titles {
+    display: none;
 }
 
 .club-second-title  {
@@ -1319,7 +1401,8 @@ body {
 }
 
 .sub-form {
-    width: 675px;
+    max-width: 675px;
+    width: 100%;
     height: 65px;
     border-radius: 30px;
     padding-top: 21px;
@@ -1402,6 +1485,10 @@ body {
     background-color: #0A0A0A;
 }
 
+.adaptive-footer-img {
+    display: none;
+}
+
 .fotter-info {
     padding-left: 136px;
     display: flex;
@@ -1477,7 +1564,8 @@ body {
     line-height: 21.6px;
     letter-spacing: 0px;
     color: #FFFFFF;
-    width: 464px;
+    max-width: 464px;
+    width: 100%;
 }
 
 .footer-right-info {
@@ -1523,7 +1611,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 130%;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     color: #FFFFFF;
 }
 
@@ -1545,6 +1633,18 @@ body {
     .programs-info {
     top: 212px;
     left: 894px;
+}
+
+.second-partners-img {
+    display: none;
+}
+
+.partners-img {
+    display: inline-block;
+}
+
+.opp-right-inf {
+    padding-right: 21px;
 }
 }
 
@@ -1572,6 +1672,21 @@ body {
         left: -44px;
     }
 
+    .section-club {
+        height: 1081px;
+    }
+
+    .section-club-info {
+        flex-direction: column;
+        margin-bottom: 64px;
+    }
+
+    .club-titles {
+        justify-content: flex-start;
+        padding-right: 16px;
+        padding-left: 128px;
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 1510px) {
@@ -1583,12 +1698,23 @@ body {
     left: 665px;
 }
 
-
 }
 
 @media (max-width: 1457px) {
     .hero-title, .hero-subtitle, .hero-start {
     font-size: 109px;
+    }
+
+    .sub-content {
+        flex-direction: column;
+    }
+
+    .sub-section {
+        height: 673px;
+    }
+
+    .footer-right-info {
+        padding-right: 20px;
     }
 }
 
@@ -1681,6 +1807,60 @@ body {
     .circle-3 {
         left: 950px;
     }
+
+    .club-second-title:first-child {
+        padding-right: 0;
+    }
+
+    .club-second-title {
+        font-size: 56px;
+    }
+
+    .club-second-title span {
+        font-size: 74px;
+    }
+
+    .footer-img {
+        opacity: 1;
+    }
+    
+    .footer-social img {
+        opacity: 1;
+    }
+
+    .footer-title {
+        font-size: 109px;
+        line-height: 101px;
+        letter-spacing: -2px;
+        margin-bottom: 50px;
+    }
+
+    .footer-socials {
+        margin-bottom: 57px;
+    }
+
+    .footer-nav {
+        margin-bottom: 50px;
+    }
+
+    .footer-left-info {
+        padding-top: 91px;
+    }
+
+    .right-footer-info {
+        margin-bottom: 9px;
+    }
+
+    .right-footer-tel {
+        margin-bottom: 44px;
+        font-size: 57px;
+        line-height: 82px;
+        letter-spacing: 4px;
+    }
+
+    .footer-right-info {
+        padding-left: 20px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -1692,6 +1872,113 @@ body {
     .programs-title {
     font-size: 80px;
     line-height: 106px;
+    }
+
+    .opp-images {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .opp-titles {
+        padding-left: 123px;
+    }
+
+    .opp-title:first-child {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: -1.8px;
+    padding-left: 0;
+    }
+
+    .opp-title:last-child {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: -1.8px;
+    padding-left: 0;
+    }
+
+    .section-opp {
+    height: 3311px;
+    }
+
+    .opp-info {
+    flex-direction: column;
+    gap: 37px;
+    }
+
+    .opp-left-inf h2 {
+    margin-bottom: 54px;
+    }
+
+    .opp-right-inf {
+        padding-top: 0;
+    }
+
+    .opp-container {
+        margin-bottom: 124px;
+    }
+
+    .opp-images img {
+    margin-bottom: 20px;
+    }
+
+    .opp-img-text p {
+    margin-bottom: 10px;
+    }
+
+    .opp-content {
+        padding-top: 112px;
+    }
+
+    .opp-left-inf h2 {
+        font-size: 56px;
+    }
+
+    .Privileges {
+        font-size: 78px;
+    }
+
+    .opp-left-inf {
+        padding-right: 20px;
+    }
+
+    .adaptive-club-titles {
+        display: flex;
+    }
+
+    .main-club-titles {
+        display: none;
+    }
+
+    .footer-img {
+        display: none;
+    }
+
+    .fotter-info {
+        flex-direction: column-reverse;
+    }
+
+    .footer-section {
+        height: 1083px;
+    }
+
+    .adaptive-footer-img {
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    .footer-title {
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: -2px;
+    }
+
+    .footer-right-info {
+        padding-left: 0;
+    }
+
+    .footer-right-info {
+        padding-top: 67px;
     }
 }
 
@@ -1775,6 +2062,62 @@ body {
         padding-left: 18px;
         padding-left: 13px;
     }
+
+    .opp-titles {
+        padding-left: 22px;
+    }
+
+    .opp-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .opp-info {
+        padding-left: 18px
+    }
+
+    .section-club-info {
+        padding-left: 21px;
+    }
+
+    .club-titles {
+        padding-left: 21px;
+    }
+
+    .section-club-info {
+        padding-right: 20px;
+    }
+
+    .sub-section {
+        padding-left: 21px;
+        padding-top: 140px;
+        padding-right: 19px;
+    }
+
+    .left-sub-content h2 {
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -2px;
+        padding-bottom: 50px;
+    }
+
+    .right-sub-content p {
+        margin-bottom: 30px;
+    }
+
+    .sub-form {
+        margin-bottom: 43px;
+    }
+
+    .fotter-info {
+        padding-left: 12px;
+        padding-right: 11px;
+    }
+
+    .footer-right-info {
+        padding-top: 67px;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -1817,6 +2160,30 @@ body {
     .bg-button-wrap {
     transform: translateX(0px);
 }
+
+    .club-title {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 98px;
+    letter-spacing: -2px;
+    margin-bottom: 51px;
+    }
+
+    .club-note {
+        position: static;
+    }
+    
+    .section-club-info {
+        gap: 15px;
+    }
+
+    .section-club {
+        padding-top: 73px;
+    }
+
+    .footer-socials {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 944px) {
@@ -1825,7 +2192,9 @@ body {
     top: 150px;
     }
 
-
+    .opp-left-inf h2 {
+        max-width: 402px;;
+    }
 }
 
 @media (max-width: 880px) { 
@@ -1833,7 +2202,8 @@ body {
     .hero-btn {
     margin: auto;
 
-    width: 308px;
+    max-width: 308px;
+    width: 100%;
     height: 51px;
     border-radius: 303px;
     opacity: 1;
@@ -2001,6 +2371,19 @@ body {
         font-size: 80px;
         line-height: 82px;
     }
+
+    .club-title {
+        font-size: 56px;
+        line-height: 58px;
+    }
+
+    .footer-rights {
+    font-family: Helvetica;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21.6px;
+    letter-spacing: 0px;
+    }
 }
 
 @media (max-width: 660px) { 
@@ -2038,5 +2421,99 @@ body {
 
     .bg-exp {
         max-width: 398px;
+    }
+
+        .club-title-line {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .line-1
+    .line-2,
+    .line-3 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .line-2 {
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .line-3 {
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .adaptive-footer-img {
+        max-width: 399px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 405px) { 
+    .hero-subtitle {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        margin-bottom: 18px;
+    }
+
+    .hero-subtitle span:first-child {
+        height: 40px;
+        line-height: 46px;
+    }
+
+    .hero-subtitle span:last-child {
+        height: 45px;
+        line-height: 46px;
+    }
+
+    .hero-subtitle {
+        gap: 0;
+        margin-bottom: 18px;
+    }
+
+    .hero-title {
+        height: 60px;
+        line-height: 30px !important;
+    }
+
+    .start-content {
+        margin-bottom: 503px;
+    }
+}
+
+@media (max-width: 390px) { 
+    .club-title-line span {
+        white-space: wrap;
+    }
+
+    .footer-socials {
+        flex-wrap: wrap;
+    }
+
+    .footer-left-info {
+        padding-top: 50px;
+    }
+
+    .opp-title:first-child {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .opp-title:last-child {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .club-second-title {
+        font-size: 50px;
+    }
+
+    .section-club {
+        height: 1374px;
     }
 }
