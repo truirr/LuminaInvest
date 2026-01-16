@@ -9,12 +9,12 @@ items.forEach(item => {
 
         items.forEach(i => {
             i.classList.remove('active');
-            i.querySelector('img').src = './img/plus.svg';
+            i.querySelector('img').src = './img/Plus.svg';
         });
 
         if (!isActive) {
             item.classList.add('active');
-            icon.src = './img/minus.svg';
+            icon.src = './img/Minus.svg';
         }
     });
 });
@@ -34,12 +34,12 @@ oppTabs.forEach(tab => {
 
         oppTabs.forEach(t => {
             t.classList.remove('active');
-            t.querySelector('img').src = './img/plus.svg';
+            t.querySelector('img').src = './img/Plus.svg';
         });
 
         if (!isActive) {
             tab.classList.add('active');
-            icon.src = './img/minus.svg';
+            icon.src = './img/Minus.svg';
         }
     });
 });
