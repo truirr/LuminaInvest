@@ -74,7 +74,7 @@
 }
 
 body {
-    font-family: 'Helvetica', Arial, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     scrollbar-width: none;
 }
 
@@ -1086,7 +1086,7 @@ body {
 }
 
 .opp-left-inf p {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 22.4px;
     letter-spacing: -0.16px;
@@ -1255,8 +1255,10 @@ body {
 }
 
 .club-note {
+    font-family: 'Helvetica' !important;
     max-width: 392px;
-    font-weight: 400;
+    font-weight: 300;
+    font-style: normal;
     font-size: 18px;
     line-height: 22.4px;
     letter-spacing: -0.16px;
@@ -1385,7 +1387,7 @@ body {
 .left-sub-content h2 {
     font-weight: 400;
     font-size: 149px;
-    line-height: 141px;
+    line-height: 107px;
     letter-spacing: -5px;
     text-transform: lowercase;
 }
